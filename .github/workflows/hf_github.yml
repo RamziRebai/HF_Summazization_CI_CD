@@ -16,8 +16,8 @@ jobs:
       - name: Add remote 
         env:
           HF: ${{ secrets.HF_TOKEN }}
-        run: git remote add space https://RamziRebai:$HF_TOKEN@huggingface.co/spaces/RamziRebai/HF_Summarize
+        run: git remote add space https://RamziRebai:$HF_TOKEN@huggingface.co/spaces/RamziRebai/HF_Summarization
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://RamziRebai:$HF_TOKEN@huggingface.co/spaces/RamziRebai/HF_Summarize main
+        run: git push --force https://RamziRebai:$HF_TOKEN@huggingface.co/spaces/RamziRebai/HF_Summarization main
