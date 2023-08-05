@@ -1,10 +1,12 @@
 name: Sync to Hugging Face hub
 on:
   push:
-    branches: [main]
-
-  # to run this workflow manually from the Actions tab
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  #allow manually trigger
   workflow_dispatch:
+
 
 jobs:
   sync-to-hub:
