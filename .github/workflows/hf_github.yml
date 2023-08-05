@@ -15,9 +15,9 @@ jobs:
           fetch-depth: 0
       - name: Add remote 
         env:
-          HF: ${{ secrets.HF }}
-        run: git remote add space https://RamziRebai:$HF@huggingface.co/spaces/RamziRebai/HF_Summarize
+          HF: ${{ secrets.HF_TOKEN }}
+        run: git remote add space https://RamziRebai:$HF_TOKEN@huggingface.co/spaces/RamziRebai/HF_Summarize
       - name: Push to hub
         env:
-          HF_TOKEN: ${{ secrets.HF }}
-        run: git push --force https://RamziRebai:$HF@huggingface.co/spaces/RamziRebai/HF_Summarize main
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://RamziRebai:$HF_TOKEN@huggingface.co/spaces/RamziRebai/HF_Summarize main
